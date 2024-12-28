@@ -32,19 +32,14 @@ This project implements a Convolutional Neural Network (CNN) for classifying MNI
 - └── requirements.txt
 
 ### Key Results
-- Reaches 99.4% validation accuracy in just 13 epochs in M1/M2 Mac using MPS acceleration
-- In Colab same model and seed it takes it reaches 99.39% Have to figure out why. Will Apply session 7 methods to imporove on collab
-- Final validation accuracy: 99.46%
-- Consistent improvement in both training and validation metrics
-- Early stopping implemented at target accuracy of 99.4%
+- With BatchNorm: 99.43%
+- With Dropout: 99.52%
+- With GAP: 99.46
 
 ## Installation
 pip install -r requirements.txt
 
-## Training Results
 
-The model achieves excellent performance on M1/M2 Mac using MPS acceleration:
-Indiviudal model files contain the best results for that model and with Analyis and details
 
 ## Usage
 
@@ -77,7 +72,8 @@ python test.py
 
 MIT License
 
-## Training Logs
+## Training Logs 
+- Logs are added to models classes 
 - With BatchNorm: 99.43%
 - With Dropout: 99.52%
 - With GAP: 99.46
