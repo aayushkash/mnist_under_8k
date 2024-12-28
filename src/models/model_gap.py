@@ -43,11 +43,24 @@ Total params: 6,790
 ================================================================
 
 
-    Target:
+Target:
     - Replace FC layer with Global Average Pooling
-    - Reduce parameter count significantly under 8k
+    - Reduce parameter count significantly under 8k 
     - Maintain or improve accuracy compared to FC models
-    - Make model morTraining With GAP model...
+    - Make model Training With GAP layer with last epochs stable over 99.4%
+
+Analysis:
+    - GAP is a good replacement for FC layer with some compromises on results.
+    - Initially we see a drop but later using Adam and Cyclic LR which improved the accuracy
+    - Added Augmentation rotation from session notes to the data loader which improved the accuracy
+    - I was able to reduced ~1400 parameters from previous dropout model
+    - Slight tuning of drop out rate was done on cuda environments from my laptop Mac M2
+    - 0.1 drop out rate was found to be optimal for this model on cuda
+
+Results:  
+  - I was able to achieve 99.46% accuracy on validation set on collab
+    - I was able to achieve 99.45% accuracy on validation set on EC2
+
 Training with 60000 samples
 Epoch: 0 | Train Loss: 0.682 | Train Acc: 83.76% | Val Loss: 9.662 | Val Acc: 96.56% | Best Val Acc: 96.56%
 Epoch: 1 | Train Loss: 0.177 | Train Acc: 95.61% | Val Loss: 5.702 | Val Acc: 97.65% | Best Val Acc: 97.65%
