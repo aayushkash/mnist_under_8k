@@ -1,6 +1,6 @@
 # MNIST CNN Classifier
 
-[![Python Tests](https://github.com/aayushkash/mnist_under_8k/actions/workflows/python-app.yml/badge.svg)](https://github.com/aayushkash/mnist_under_8k/actions/workflows/python-app.yml)
+[![Python Tests](https://github.com/your-username/mnist_under_8k/actions/workflows/python-app.yml/badge.svg)](https://github.com/your-username/mnist_under_8k/actions/workflows/python-app.yml)
 
 This project implements a Convolutional Neural Network (CNN) for classifying MNIST digits using PyTorch. The model is designed to be lightweight with less than 8000 parameters while maintaining good accuracy.
 
@@ -15,8 +15,15 @@ This project implements a Convolutional Neural Network (CNN) for classifying MNI
 
 ## Project Structure
 - mnist_cnn/
+- notebook/
+- |-ec2_training_final.ipynb
+- |-final_model_collab.ipynb
 - ├── src/
-- │ ├── model.py # CNN architecture
+- │ ├── models
+- │ │ ├── model_relu.py
+- │ │ ├── model_batchnorm.py
+- │ │ ├── model_dropout.py
+- │ │ ├── model_gap.py
 - │ ├── train.py # Training logic
 - │ ├── data.py # Data loading utilities
 - │ └── utils.py # Helper functions
